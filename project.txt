@@ -1,0 +1,38 @@
+Objective: ExpressJS API - Fitness Tracker
+
+1. What is the main objective of the project?
+The main objective is to build a personal fitness tracker application that allows users to log their workouts, track progress, and manage workout routines efficiently.
+
+2. Who are the target users of the application?
+The target users are individuals looking to track their fitness journey and workout progress over time.
+
+3. What are the core features or functionalities required?
+The core features involve CRUD operations:
+
+Create: Users can register, log in, and add new workouts.
+Read: Users can retrieve their profile details and list of workouts.
+Update: Users can update workout details or mark workouts as complete.
+Delete: Users can delete workouts they no longer need.
+
+4. What data will the application need to store and manage?
+User Data: Email and hashed password.
+Workout Data: Name, duration, dateAdded, and status (e.g., complete or incomplete).
+
+5. Are there any specific technical requirements or constraints?
+- The backend will use Express.js for the API, MongoDB with Mongoose for data management, and follow RESTful Architecture principles.
+- Routes and endpoints must handle HTTP methods with appropriate status codes.
+
+6. What are the security and authentication requirements?
+- JWT (JSON Web Tokens) for user authentication and session management.
+- Bcrypt for password hashing to ensure secure user credentials.
+
+7. What are your routes and controllers?
+Routes and corresponding controller actions:
+
+/register (registerUser): Register a new user with email and password.
+/login (loginUser): Log in a user and return a JWT token.
+/addWorkout (addWorkout) Add a new workout for the logged-in user.
+/getMyWorkouts (getMyWorkouts): Retrieve all workouts of the logged-in user.
+/updateWorkout (updateWorkout): Update a specific workout by ID for the user.
+/deleteWorkout (deleteWorkout): Delete a specific workout by ID for the user.
+/completeWorkoutStatus (markWorkoutAsComplete): Mark a workout's status as complete for the user.
